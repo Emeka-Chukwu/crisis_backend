@@ -23,6 +23,10 @@ app.use((req, res, next) => {
 
 // app.use('/api/v1/', require('../routes/users/index'));
  app.use("/api/mail", sendEmail);
+ app.use("/", (req, res, next)=> {
+res.json({"title":"welcome boss"});
+ }
+ );
 
 app.use((err, req, res, next) => {
   console.log("====== consoling error js app.js");
